@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Добавить в портфель</button>
+</form>
+    <ul>
+{% for item in portfolio_items %}
+    <li>
+        <p>Криптовалюта: {{ item.currency.name }}</p>
+        <p>Цена: {{ item.currency.price }}</p>
+        <p>Количество: {{ item.amount }}</p>
+        <p>Стоимость в долларах: {{ item.currency_price }}</p>
+
+    </li>
+{% empty %}
+    <li>Портфель пуст</li>
+{% endfor %}
+</ul>
+<p>Общая стоимость портфеля в долларах: {{total_money}}</p>
+{% endblock %}

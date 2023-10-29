@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+{% block content %}
+    {%for currency in currency_list%}
+        <p>{{ currency.name }}</p>
+        <p>{{ currency.symbol }}</p>
+        <p>{{ currency.price}}</p>
+        <p>{{ currency.volume }}</p>
+    {%endfor%}
+    <p>Монеты</p>
+{% endblock %}
