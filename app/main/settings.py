@@ -157,3 +157,17 @@ ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/'
 ACCOUNT_FORMS = {
     'signup': 'main.forms.CustomSignupForm',
 }
+LOGGING = {
+    'version': 1,
+    'handlers':{
+        'console': {'class':'logging.StreamHandler'}
+    },
+    'loggers':{
+        'django.db.backends':{
+            'handlers':['console'],
+            'level':'INFO'
+        }
+    }
+}
+#celery
+CELERY_BROKER_URL = 'redis://redis:6379/0'
