@@ -12,7 +12,7 @@
         <p>Цена: {{ item.currency.price }}</p>
         <p>Количество: {{ item.amount }}</p>
         <p>Стоимость в долларах: {{ item.currency_price }}</p>
-
+        <a href="{% url 'currency_delete' item.id %}">Удалить из портфеля</a>
     </li>
 {% empty %}
     <li>Портфель пуст</li>

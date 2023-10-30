@@ -28,3 +28,5 @@ class PortfolioItem(models.Model):
         for item in portfolio_item:
             sum += item.currency_price()
         return sum
+    def __str__(self):
+        return self.currency.name

@@ -5,6 +5,7 @@
         <p>{{ currency.symbol }}</p>
         <p>{{ currency.price}}</p>
         <p>{{ currency.volume }}</p>
+        <a href="{% url 'currency_detail' currency.id%}">Подробнее</a>
     {%endfor%}
     <p>Монеты</p>
 {% endblock %}
