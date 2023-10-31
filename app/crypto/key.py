@@ -1,1 +1,1 @@
-KEY = 'ca6a07c8-1ef9-4efd-abe0-d58a23b5c40d'
+KEY = 'api-key'
